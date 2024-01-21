@@ -1,6 +1,7 @@
-checkArr = [0] * 4
-myArr = [0] * 4
-checkSecret = 0
+# 전역 변수 선언
+checkArr = [0] * 4                  #비밀번호 체크 리스트
+myArr = [0] * 4                     #현재 상태 리스트
+checkSecret = 0                     # 몇개의 문자와 관련된 개수를 충족했는지 판단하는 변수
 
 # 함수 정의
 def myadd(c): #새로 들어온 문자를 처리하는 함수
@@ -48,10 +49,12 @@ checkArr = list(map(int, input().split()))
 for i in range(4):
     if checkArr[i] == 0:
         checkSecret += 1
+        
 for i in range(P):  #초기 P 부분 문자열 처리 부분
     myadd(A[i])
 if checkSecret == 4: #4자릿수와 관련된 크기가 모두 충족될 때 유효한 비밀번호
     Result += 1
+    
 for i in range(P, S):
     j = i - P
     myadd(A[i])
