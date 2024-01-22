@@ -1,6 +1,6 @@
 import sys
 input = sys.stdin.readline
-result = 0
+result = 0              # swap 횟수
 
 def merge_sort(s, e):
     global result

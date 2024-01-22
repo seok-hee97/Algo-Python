@@ -1,29 +1,32 @@
+""" 큌 정렬 pivot sort"""
+
 import sys
 
 input = sys.stdin.readline
-N, K = map(int, input().split())
-A = list(map(int, input().split()))
+N, K = map(int, input().split())     # N(숫자의 개수) K(ㅏ번쨰 수)
+A = list(map(int, input().split()))     # A(숫자 데이터 저장 배열)   
 
-
+# 별도의함수 구현 부분
 def quickSort(S, E, K):
     global A
     if S < E:
-        pivot = partition(S, E)
+        pivot = partition(S, E)     #피벗 구하기 함수
+        #ㅔpvie
         if pivot == K:  # K번째 수가 pivot이면 더이상 구할 필요 없음
             return
         elif K < pivot:  # K가 pivot보다 작으면 왼쪽 그룹만 정렬
-            quickSort(S, pivot - 1, K)
+            quickSort(S, pivot - 1, K)      #퀵정렬 수행하기
         else:  # K가 pivot보다 크면 오른쪽 그룹만 정렬
-            quickSort(pivot + 1, E, K)
+            quickSort(pivot + 1, E, K)      #큌정렬 수행하기
 
-
-def swap(i, j):
+#  swap 힘스
+def swap(i, j):     # 매개변수 i, j 스위치할 인덱스
     global A
     temp = A[i]
     A[i] = A[j]
     A[j] = temp
 
-
+# 피벗구하기 함수
 def partition(S, E):
     global A
 
@@ -32,7 +35,7 @@ def partition(S, E):
             swap(S, E)
         return E
 
-    M = (S + E) // 2
+    M = (S + E) // 2        # 중앙값
     swap(S, M)
     pivot = A[S]
     i = S + 1
