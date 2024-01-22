@@ -44,6 +44,12 @@
   
 큐 너비 우선 탐색(BFS:Breadth First Search)에서 자주 사용
 
+
+우선순위 큐 
+ex]
+myQueue.put(abs(request), request)
+1:절댓값 2:음수 인것을 우선순위 큐에 데이터를 추가할때 순서가 정렬 우선수위의 기준이 됨
+참고 :https://cocobi.tistory.com/204
 ### 정렬
 ### 탐색
 ### 그리디
