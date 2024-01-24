@@ -1,9 +1,11 @@
 import sys
 sys.setrecursionlimit(10000)
 input = sys.stdin.readline
-N = int(input())
+N = int(input())                # 자릿수
 
 
+
+# 소수 구하기 함수
 def isPrime(num):
     for i in range(2, int(num / 2 + 1)):
         if num % i == 0:
@@ -11,6 +13,7 @@ def isPrime(num):
     return True
 
 
+# DFS 구현
 def DFS(number):
     if len(str(number)) == N:
         print(number)

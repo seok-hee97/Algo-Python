@@ -1,10 +1,14 @@
 import sys
 sys.setrecursionlimit(10000)
 input = sys.stdin.readline
-n, m = map(int, input().split())
-A = [[] for _ in range(n+1)]
-visited = [False] * (n+1)
 
+
+n, m = map(int, input().split())        # n: 노드 개수, m:에지개수
+A = [[] for _ in range(n+1)]            #(그래프 데이터 저장 인접 리스트) 초기화
+visited = [False] * (n+1)               #방문기록 리스트 초기화
+
+
+# DFS 구현!!!
 def DFS(v):
     visited[v] = True
     for i in A[v]:

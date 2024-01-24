@@ -66,6 +66,16 @@ myQueue.put(abs(request), request)
 
 
 ### 탐색
+- 깊이 우선 탐색(DFS: depth-first search)
+  - 재귀함수로 구현
+  - 스택 자료구조 이용 
+  - 시간 복잡도 O(V+E)
+- 너비 우선 탐색
+- 이진 탐색
+  
+
+
+
 ### 그리디
 ### 정수론
 

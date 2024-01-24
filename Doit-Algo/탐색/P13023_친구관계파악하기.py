@@ -7,6 +7,7 @@ A = [[] for _ in range(N + 1)]
 visited = [False] * (N + 1)
 
 
+#DFS 구현
 def DFS(now, depth):
     global arrive
     if depth == 5 or arrive == True:    # 깊이가 5가 되면 종료
