@@ -10,7 +10,7 @@ for i in range(M):
     start = 0
     end = len(A) - 1
     while start <= end:
-        midi = int((start + end) / 2)
+        midi = int((start + end) / 2)               # 정수값으로 정확히 떨여져야해서(index로 사용할꺼여서
         midv = A[midi]
         if midv > target:
             end = midi - 1

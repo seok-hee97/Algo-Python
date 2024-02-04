@@ -6,6 +6,7 @@ for i in A:
     if start < i:
         start = i  # 레슨 최댓값을 시작 인덱스로 저장
     end += i  # 모든 레슨의 총합을 종료 인덱스로 저장
+    
 while start <= end:
     middle = int((start + end) / 2)
     sum = 0
