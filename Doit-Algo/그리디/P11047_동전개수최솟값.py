@@ -1,8 +1,11 @@
 N, K = map(int, input().split())
-A = [0] * N
+A = [0] * N                     # 동전 데이터 리스트
+
 for i in range(N):
-    A[i] = int(input())
-count = 0
+    A[i] = int(input())         # 동전 금액 입력 (N 만큼)
+    
+count = 0                       # 누적된 동전수
+
 for i in range(N - 1, -1, -1):
     if A[i] <= K:  # 현재 동전의 가치가 K보다 작거나 같으면 구성에 추가
         count += int(K / A[i])
