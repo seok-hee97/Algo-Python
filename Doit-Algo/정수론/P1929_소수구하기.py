@@ -1,8 +1,9 @@
 import math
-M, N = map(int, input().split())
-A = [0] * (N + 1)
+
+M, N = map(int, input().split())        #M 시작수  N 종료 수
+A = [0] * (N + 1)                       # 소수 리스트
 for i in range(2, N + 1):
-    A[i] = i
+    A[i] = i                            # 각각의 인덱스 값으로 초기화
 for i in range(2, int(math.sqrt(N)) + 1):  # 제곱근까지만 수행
     if A[i] == 0:
         continue
