@@ -1,7 +1,53 @@
+# 특정 원소가 속한 집합을 찾기
+def find(parent, x):
+    if parent[x] == x:
+        return x
+    parent[x] = find(parent, parent[x])
+    return parent[x]
+
+# 두 원소가 속한 집합을 합치기 (간선 연결한다고 생각!)
+def union(parent, a, b):
+    rootA = find(parent, a)
+    rootB = find(parent, b)
+    
+    if rootA < rootB:
+        parent[rootB] = rootA
+    else:
+        parent[rootA] = rootB
 
 
+def solution(n, costs):
+    # Union Find 자료구조 초기화
+    parent = [i for i in range(n)]
+    
+    # 크루스칼 알고리즘을 위한 간선 정보 정렬
+    edges = sorted(costs, key=lambda x: x[2])
+    # cost 리스트에서 lambda x: x[2] 3번째 원소가 비용이기때문에
+    
+    # 최소 비용
+    answer = 0
+    
+    # 모든 간선 검사
+    for edge in edges:
+        a, b, cost = edge
+        
+        # 두 원소가 속한 집합의 루트 노드 찾기
+        rootA = find(parent, a)
+        rootB = find(parent, b)
+        
+        # 루트 노드가 다르면 연결
+        if rootA != rootB:
+            union(parent, rootA, rootB)
+            answer += cost
+    
+    return answer
 
 
+'''[크루스칼][Lv3] 섬 연결하기 파이썬
+https://jie0025.tistory.com/452
+
+
+'''
 
 '''
 문제 설명
