@@ -1,6 +1,59 @@
 
+# DFS 사용
+
+def DFS(n, computers, com, visited):
+    visited[com] =True
+    for connect in range(n):
+        if connect != com and computers[com][connect] ==1:  #연결된 컴퓨터
+            if visited[connect] == False:
+                DFS(n, computers, connect, visited)
+                
+def solution(n, computers):
+    answer = 0
+    visited = [False for i in range(n)]
+    for com in range(n):
+        if visited[com] == False:
+            DFS(n, computers, com, visited)
+            answer += 1 #DFS 최대한 컴퓨터들을 방문하고 빠져나오게 되면 그것이 하나의 네트워크.
+            
+    return answer
+    
 
 
+
+
+
+
+# BFS 사용
+
+def BFS(n, computers, com, visited):
+    visited[com] = True
+    queue = []
+    queue.append(com)
+    
+    while len(queue) != 0:
+        com = queue.pop(0)
+        visited[com] = True
+        for connect in range(n):
+            if connect != com and computers[com][connect] == 1:
+                if visited[connect] == False:
+                    queue.append(connect)
+                    
+
+def solution(n,computers):
+    answer = 0
+    visited = [False for i in range(n)]
+    for com in range(n):
+        if visited[com] == False:
+            BFS(n, computers, com, visited)
+            answer += 1
+            
+    return answer
+
+'''
+- 프로그래머스 - 네트워크 (DFS, BFS) Python
+https://velog.io/@timointhebush/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-DFS-BFS-Python
+'''
 
 
 '''문제 설명
