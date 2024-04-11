@@ -1,7 +1,7 @@
 # DFS / BFS
 
 
-
+- DFS
 ```python
 # g = graph
 # v = visit
@@ -15,10 +15,12 @@ def DFS(g,v,visited):
 ```
 
 
+
+- BFS
 ```python
 from collections import deque
 
-def bfs(g,start,visited):
+def BFS(g,start,visited):
 	queue = deque([start])
 	visited[start] = True
 
