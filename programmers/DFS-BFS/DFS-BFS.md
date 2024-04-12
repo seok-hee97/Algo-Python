@@ -1,9 +1,6 @@
 # DFS / BFS
 
-
 - DFS
-  
-
 - 재귀로 표현 
 ```python
 # g = graph
@@ -16,8 +13,7 @@ def DFS(g,v,visited):
 		if not visited[i]:
 			dfs(g,i,visited)
 ```
-
-
+- Stack
 ```python
 def dfs_iteration(graph, root):
     # visited = 방문한 꼭지점들을 기록한 리스트
@@ -36,9 +32,6 @@ def dfs_iteration(graph, root):
     return visited
 # 출처: https://juhee-maeng.tistory.com/entry/Python-깊이-우선-탐색DFS-구현하기 [simPLE:티스토리]
 ```
-
-
-
 
 - BFS
 
