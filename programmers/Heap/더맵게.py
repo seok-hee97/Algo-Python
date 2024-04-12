@@ -2,7 +2,7 @@ import heapq
 
 def solution(scoville, K):
     answer = 0
-    heapq.heapify(scoville)         # 리스트 x를 즉각적으로 heap으ㅗ 변환함
+    heapq.heapify(scoville)         # 리스트 x를 즉각적으로 heap으로 변환함
     
     while scoville[0] < K:
         mix = heapq.heappop(scoville) + (heapq.heappop(scoville)*2)

@@ -13,8 +13,6 @@ def solution(participant, completion):
             answer = par
             return par
     answer = participant[-1]
-    return participant[-1]
-    
     
     
     return answer
