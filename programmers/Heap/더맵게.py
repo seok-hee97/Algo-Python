@@ -8,7 +8,7 @@ def solution(scoville, K):
         mix = heapq.heappop(scoville) + (heapq.heappop(scoville)*2)
         heapq.heappush(scoville, mix)
         answer += 1
-        if len(scoville) == 1 and scoville[0] < K:
+        if len(scoville) == 1 and scoville[0] < K:          # for index error
             return -1
         
         
