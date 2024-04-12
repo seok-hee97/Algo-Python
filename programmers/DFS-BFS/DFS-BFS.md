@@ -2,6 +2,7 @@
 
 
 - DFS
+  
 ```python
 # g = graph
 # v = visit
@@ -17,6 +18,7 @@ def DFS(g,v,visited):
 
 
 - BFS
+
 ```python
 from collections import deque
 

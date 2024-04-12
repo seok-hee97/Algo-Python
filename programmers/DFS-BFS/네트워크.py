@@ -6,7 +6,7 @@ def DFS(n, computers, com, visited):
     for connect in range(n):
         if connect != com and computers[com][connect] ==1:  #연결된 컴퓨터
             if visited[connect] == False:
-                DFS(n, computers, connect, visited)
+                DFS(n, computers, connect, visited)         #재귀함수 사용
                 
 def solution(n, computers):
     answer = 0

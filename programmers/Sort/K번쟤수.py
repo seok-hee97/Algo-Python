@@ -2,7 +2,7 @@ def solution(array, commands):
     answer = []
     
     for i in range(len(commands)):
-        arr = array[commands[i][0]-1:commands[i][1]]
+        arr = array[commands[i][0]-1:commands[i][1]]            # slice by command
 
         arr.sort()
         print(arr)

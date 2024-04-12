@@ -1,6 +1,9 @@
 def solution(numbers):    
     s = list(map(str,numbers))
-    a = sorted(s,key=lambda x: x*3,reverse=1)
+    
+    a = sorted(s,key=lambda x: x*3,reverse=1)           # 요게 핵심
+    # reversed = True
+    
     return str(int("".join(a)))
 
 

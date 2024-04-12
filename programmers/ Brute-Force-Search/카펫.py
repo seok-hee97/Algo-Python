@@ -19,8 +19,6 @@ def solution(brown, yellow):
                 if 2*w + 2*h == brown + 4:
                     answer = [w,h]
     
-    
-    
 
     return answer
 
