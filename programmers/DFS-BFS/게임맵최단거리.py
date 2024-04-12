@@ -5,10 +5,10 @@ def solution(maps):
     dx = [-1, 1, 0, 0]
     dy = [0, 0, -1, 1]
     
-    queue = deque()
+    queue = deque()         # init var queue
     queue.append((0,0))     # 0, 0에서 시작
     
-    while queue:
+    while queue:            # loop end when queue is empty
         x, y = queue.popleft()
         for i in range(4):
             nx = x + dx[i]
