@@ -15,7 +15,6 @@ def bfs(begin, target, words):
     while queue:
         now, step = queue.popleft()
         
-        
         if now == target:
             return step
         
