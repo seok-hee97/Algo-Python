@@ -19,11 +19,6 @@ def solution(n, computers):
     return answer
     
 
-
-
-
-
-
 # BFS 사용
 
 def BFS(n, computers, com, visited):
